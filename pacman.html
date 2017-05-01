@@ -13,6 +13,12 @@
     <script src="//cdn.jsdelivr.net/phaser/2.2.2/phaser.min.js"></script>
 </head>
 <body>
+	
+	<audio autoplay loop>												<!--____________________________25/4_____audio____________________________-->
+        <source src="assets/TheChainsmokersAllWeKnow8Bit.mp3" type="audio/mp3">		<!--____________________________25/4_____audio____________________________-->
+    </audio>															<!--____________________________25/4_____audio____________________________-->
+
+  
 
     <script type="text/javascript">
 
@@ -25,6 +31,7 @@
         this.pacman = null;
 
         this.safetile = 14;
+        this.safetile2 = 14;		//____________________________24/4_____bonus____________________________
         this.gridsize = 16;
 
         this.speed = 150;
@@ -38,6 +45,9 @@
 
         this.current = Phaser.NONE;
         this.turning = Phaser.NONE;
+
+        this.score=0;			//____________________________6/4_____score____________________________
+        this.scoreText='';		//____________________________6/4_____score____________________________
 
     };
 
@@ -63,6 +73,7 @@
             this.load.crossOrigin = 'anonymous';
 
             this.load.image('dot', 'assets/dot.png');
+            this.load.image('brgr', 'assets/brgr.png');		//____________________________24/4_____bonus____________________________
             this.load.image('tiles', 'assets/pacman-tiles.png');
             this.load.spritesheet('pacman', 'assets/pacman.png', 32, 32);
             this.load.tilemap('map', 'assets/pacman-map.json', null, Phaser.Tilemap.TILED_JSON);
@@ -79,28 +90,32 @@
             this.layer = this.map.createLayer('Pacman');
 
             this.dots = this.add.physicsGroup();
+            this.brgrs = this.add.physicsGroup();		//____________________________24/4_____bonus____________________________
 
             this.map.createFromTiles(7, this.safetile, 'dot', this.layer, this.dots);
-
+            this.map.createFromTiles(35, this.safetile2, 'brgr', this.layer, this.brgrs)		//____________________________24/4_____bonus____________________________
             //  The dots will need to be offset by 6px to put them back in the middle of the grid
-            this.dots.setAll('x', 6, false, false, 1);
-            this.dots.setAll('y', 6, false, false, 1);
-
-            //  Pacman should collide with everything except the safe tile
+            //this.dots.setAll('x', 6, false, false, 1);	//The dots are already in the middle of the grid. No need for this line.
+            //this.dots.setAll('y', 6, false, false, 1);	//The dots are already in the middle of the grid. No need for this line.
+            
+            //  Pacman should collide with everything except the safe tiles (dots & brgrs)
             this.map.setCollisionByExclusion([this.safetile], true, this.layer);
+            this.map.setCollisionByExclusion([this.safetile2], true, this.layer);		//____________________________24/4_____bonus____________________________
 
             //  Position Pacman at grid location 14x17 (the +8 accounts for his anchor)
             this.pacman = this.add.sprite((14 * 16) + 8, (17 * 16) + 8, 'pacman', 0);
             this.pacman.anchor.set(0.5);
-            this.pacman.animations.add('munch', [0, 1, 2, 1], 20, true);
+            this.pacman.animations.add('munch', [0, 1, 2, 1], 20, true);								//-animation-
 
             this.physics.arcade.enable(this.pacman);
             this.pacman.body.setSize(16, 16, 0, 0);
 
             this.cursors = this.input.keyboard.createCursorKeys();
 
-            this.pacman.play('munch');
+            this.pacman.play('munch');																	//-animation-
             this.move(Phaser.LEFT);
+
+            this.scoreText = game.add.text(175, 0, 'Score: 0', { fontSize: '34px Arial', fill: 'white' });		//____________________________6/4_____score____________________________
 
         },
 
@@ -222,17 +237,41 @@
 
             dot.kill();
 
+            var audio = new Audio('assets/ChompSoundFX.mp3');	//____________________________25/4_____audio____________________________
+            audio.play()                                        //____________________________25/4_____audio____________________________
+
+            this.score+=5;										//____________________________6/4_____score____________________________
+            this.scoreText.text= 'Score: ' + this.score;		//____________________________6/4_____score____________________________
+
             if (this.dots.total === 0)
             {
                 this.dots.callAll('revive');
             }
-
+	
         },
+
+        eatBrgr: function (pacman, brgr) {						//____________________________24/4_____bonus____________________________
+        														//____________________________24/4_____bonus____________________________
+            brgr.kill();										//____________________________24/4_____bonus____________________________
+            													//____________________________24/4_____bonus____________________________
+            var audio = new Audio('assets/ChompSoundFX.mp3');	//____________________________1/5_____audio____________________________
+            audio.play()										//____________________________1/5_____audio____________________________
+            													//____________________________24/4_____bonus____________________________
+            this.score+=50;										//____________________________6/4_____score____________________________
+            this.scoreText.text= 'Score: ' + this.score;		//____________________________6/4_____score____________________________
+            													//____________________________24/4_____bonus____________________________
+            if (this.brgrs.total === 0)							//____________________________24/4_____bonus____________________________
+            {													//____________________________24/4_____bonus____________________________
+                this.brgrs.callAll('revive');					//____________________________24/4_____bonus____________________________
+            }													//____________________________24/4_____bonus____________________________
+
+        },    
 
         update: function () {
           
             this.physics.arcade.collide(this.pacman, this.layer);
             this.physics.arcade.overlap(this.pacman, this.dots, this.eatDot, null, this);
+            this.physics.arcade.overlap(this.pacman, this.brgrs, this.eatBrgr, null, this);		//____________________________24/4_____bonus____________________________
 
             this.marker.x = this.math.snapToFloor(Math.floor(this.pacman.x), this.gridsize) / this.gridsize;
             this.marker.y = this.math.snapToFloor(Math.floor(this.pacman.y), this.gridsize) / this.gridsize;
@@ -260,3 +299,4 @@
 
 </body>
 </html>
+
