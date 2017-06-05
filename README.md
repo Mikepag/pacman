@@ -4,8 +4,8 @@
 **Αριθμός Μητρώου: Π2014035**
 
 **Links:**
-* Link προσωπικού Αποθετηρίου: https://github.com/Mikepag/pacman
-* Link Εκτελέσιμου: https://mikepag.github.io/pacman/pacman.html
+* Link προσωπικού Αποθετηρίου: [https://github.com/Mikepag/pacman]
+* Link Εκτελέσιμου: [https://mikepag.github.io/pacman/pacman.html]
 
 ### Tίτλος Εργασίας: *Δημιουργία Pacman*
 
