@@ -5,7 +5,7 @@
 
 **Links:**
 * [Link Προσωπικού Αποθετηρίου](https://github.com/Mikepag/pacman).
-* [Link Εκτελέσιμου](https://mikepag.github.io/pacman/pacman.html)..
+* [Link Εκτελέσιμου](https://mikepag.github.io/pacman/pacman.html).
 * [Link Τελικής Αναφοράς](https://mikepag.github.io/pacman/) σε μορφή GitHub Pages **_(Bonus1, 1 μονάδα)_**.
 
 ### Tίτλος Εργασίας: *Δημιουργία Pacman*
@@ -48,7 +48,7 @@
 
 ### Βιβλιογραφία
 * [Κεντρικό αποθετήριο project](https://github.com/ioniodi/pacman) από το οποίο δημιουργήθηκε αντίγραφο (fork).
-* Η τελική εικόνα [pacman.png](https://github.com/Mikepag/pacman/blob/master/assets/pacman.png) προέκυψε από επεξεργασία της εικόνας: [https://goo.gl/HH3fTi](https://goo.gl/HH3fTi)
+* Η τελική εικόνα [pacman.png](https://github.com/Mikepag/pacman/blob/master/assets/pacman.png) προέκυψε από επεξεργασία της εικόνας: [https://goo.gl/HH3fTi](https://goo.gl/HH3fTi).
 * [ https://goo.gl/O048qq]( https://goo.gl/O048qq): Εικόνα [Dot.png](https://github.com/Mikepag/pacman/blob/master/assets/dot.png).
 * [https://goo.gl/RbVHBC](https://goo.gl/RbVHBC): Εικόνα [Brgr.png](https://github.com/Mikepag/pacman/blob/master/assets/brgr.png).
 * [https://goo.gl/z9tmnP](https://goo.gl/z9tmnP): Ηχητικό Εφέ [SuperMarioFireFlowerSoundFX.mp3](https://github.com/Mikepag/pacman/blob/master/assets/SuperMarioFireFlowerSoundFX.mp3).
