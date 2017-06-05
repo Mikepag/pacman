@@ -4,8 +4,8 @@
 **Αριθμός Μητρώου: Π2014035**
 
 **Links:**
-* Link προσωπικού Αποθετηρίου: [https://github.com/Mikepag/pacman]
-* Link Εκτελέσιμου: [https://mikepag.github.io/pacman/pacman.html]
+* [Link προσωπικού Αποθετηρίου](https://github.com/Mikepag/pacman)
+* [Link Εκτελέσιμου](https://mikepag.github.io/pacman/pacman.html)
 
 ### Tίτλος Εργασίας: *Δημιουργία Pacman*
 
@@ -46,13 +46,13 @@
 ![s2](https://cloud.githubusercontent.com/assets/15000701/26785918/5f5aa3ee-4a0d-11e7-9e59-264422423fe8.JPG)
 
 ### Βιβλιογραφία
-* Κεντρικό αποθετήριο project : https://github.com/ioniodi/pacman
-* Η τελική εικόνα [pacman.png](https://github.com/Mikepag/pacman/blob/master/assets/pacman.png) προέκυψε από επεξεργασία της εικόνας: https://goo.gl/HH3fTi
-* [Dot.png](https://github.com/Mikepag/pacman/blob/master/assets/dot.png) : https://goo.gl/O048qq
-* [Brgr.png](https://github.com/Mikepag/pacman/blob/master/assets/brgr.png) : https://goo.gl/RbVHBC
-* [SuperMarioFireFlowerSoundFX.mp3](https://github.com/Mikepag/pacman/blob/master/assets/SuperMarioFireFlowerSoundFX.mp3) : https://goo.gl/z9tmnP
-* [SuperMarioPipeTravelSoundFX.mp3](https://github.com/Mikepag/pacman/blob/master/assets/SuperMarioPipeTravelSoundFX.mp3) : https://goo.gl/PPpNPE
-* [TheChainsmokersAllWeKnow8Bit.mp3](https://github.com/Mikepag/pacman/blob/master/assets/TheChainsmokersAllWeKnow8Bit.mp3) : https://goo.gl/ceqL9Y
+* [Κεντρικό αποθετήριο project](https://github.com/ioniodi/pacman) από το οποίο δημιουργήθηκε αντίγραφο (fork).
+* Η τελική εικόνα [pacman.png](https://github.com/Mikepag/pacman/blob/master/assets/pacman.png) προέκυψε από επεξεργασία της εικόνας: [https://goo.gl/HH3fTi](https://goo.gl/HH3fTi)
+* [ https://goo.gl/O048qq]( https://goo.gl/O048qq): Εικόνα [Dot.png](https://github.com/Mikepag/pacman/blob/master/assets/dot.png).
+* [https://goo.gl/RbVHBC](https://goo.gl/RbVHBC): Εικόνα [Brgr.png](https://github.com/Mikepag/pacman/blob/master/assets/brgr.png).
+* [https://goo.gl/z9tmnP](https://goo.gl/z9tmnP): Ηχητικό Εφέ [SuperMarioFireFlowerSoundFX.mp3](https://github.com/Mikepag/pacman/blob/master/assets/SuperMarioFireFlowerSoundFX.mp3).
+* [https://goo.gl/PPpNPE](https://goo.gl/PPpNPE): Ηχητικό Εφέ [SuperMarioPipeTravelSoundFX.mp3](https://github.com/Mikepag/pacman/blob/master/assets/SuperMarioPipeTravelSoundFX.mp3).
+* [https://goo.gl/ceqL9Y](https://goo.gl/ceqL9Y): Ήχος Background [TheChainsmokersAllWeKnow8Bit.mp3](https://github.com/Mikepag/pacman/blob/master/assets/TheChainsmokersAllWeKnow8Bit.mp3).
   
 ### Συμπεράσματα
 Η εργασία αυτή αποτέλεσε έναν δημιουργικό και πολύ ενδιαφέρων τρόπο ενασχόλησης με τη γλώσσα HTML5, τη βιβλιοθήκη Phaser και τo Github για την ανάπτυξη μιας ψυχαγωγικής εφαρμογής. Η τελική μορφή του παιχνιδιού μπορεί να μην είναι η βέλτιστη δυνατή αλλά δεν παύει να είναι αρκετά λειτουργική και φυσικά αφήνει πολλά περιθώρια μελλοντικής βελτίωσης.
